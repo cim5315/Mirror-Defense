@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(Vector2.Distance(target.position, transform.position) <= 0.1f)
+        if(Vector2.Distance(target.position, transform.position) <= 0f)
         {
             pathIndex++;
             if(pathIndex == LevelManager.main.path.Length)
@@ -43,7 +43,7 @@ public class EnemyMovement : MonoBehaviour
         float snappedAngle = Mathf.Round(rawAngle / 90f) * 90f;
         transform.rotation = Quaternion.Euler(0, 0, snappedAngle);
 
-        if (distanceToTarget < 0.1f)
+        if (distanceToTarget < 0.01f)
         {
             transform.position = target.position;
             rb.linearVelocity = Vector2.zero;
