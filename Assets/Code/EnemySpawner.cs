@@ -15,18 +15,29 @@ public class EnemySpawner : MonoBehaviour
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private bool isSpawning = false;
+  
+    // Update is called once per frame
+    void Update()
     {
-        enemiesLeftToSpawn = baseEnemies;
+        if (isSpawning == false)
+        {
+
+        }
+        timeSinceLastSpawn += Time.deltaTime;
+
+        if(timeSinceLastSpawn >= 1/enemiesPerSecond)
+        {
+
+        }
+    }
+    private void StartWave()
+    {
+        isSpawning = true;
+        enemiesLeftToSpawn = EnemiesPerWave();
     }
     private int EnemiesPerWave()
     {
         return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor));
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
