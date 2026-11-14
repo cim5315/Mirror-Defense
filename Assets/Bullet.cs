@@ -2,7 +2,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    Rigidbody2D rigidbody2D;
+    [Header("References")]
+    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private int[] enemyType = new int[5];
+
+    [Header("Attributes")]
+    [SerializeField] private float bulletSpeed = 5f;
+
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,8 +20,8 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        Vector2 direction = transform.forward * bulletSpeed;
     }
 }
