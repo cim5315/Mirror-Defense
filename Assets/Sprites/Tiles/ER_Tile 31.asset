@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ER_Tile 31
   m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
   m_AnimatedSprites:
-  - {fileID: 132543640, guid: 04bfaa15852ac964799e163f17f68bc9, type: 3}
-  - {fileID: -1671960254, guid: 04bfaa15852ac964799e163f17f68bc9, type: 3}
+  - {fileID: 706963722, guid: 04bfaa15852ac964799e163f17f68bc9, type: 3}
+  - {fileID: 1362227504, guid: 04bfaa15852ac964799e163f17f68bc9, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
