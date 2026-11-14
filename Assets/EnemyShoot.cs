@@ -26,7 +26,7 @@ public class EnemyShoot : MonoBehaviour
     }
     private void Shoot()
     {
-        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
     }
 }

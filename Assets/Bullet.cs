@@ -16,12 +16,6 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        rigidbody2D.linearVelocity = 4 * Vector3.down;
-    }
-
-    // Update is called once per frame
-    private void FixedUpdate()
-    {
-        Vector2 direction = transform.forward * bulletSpeed;
+        rigidbody2D.linearVelocity = transform.right * bulletSpeed;
     }
 }

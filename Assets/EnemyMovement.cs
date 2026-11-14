@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -37,6 +38,10 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector2 direction = (target.position - transform.position);
         float distanceToTarget = direction.magnitude;
+
+        float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; ;
+        float snappedAngle = Mathf.Round(rawAngle / 90f) * 90f;
+        transform.rotation = Quaternion.Euler(0, 0, snappedAngle);
 
         if (distanceToTarget < 0.1f)
         {
