@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        enemiesLeftToSpawn = baseEnemies
+        enemiesLeftToSpawn = baseEnemies;
     }
     private int EnemiesPerWave()
     {
