@@ -16,19 +16,25 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+
+    private void Start()
+    {
+        StartWave();
+    }
   
     // Update is called once per frame
     void Update()
     {
         if (isSpawning == false)
         {
+            return;
 
         }
         timeSinceLastSpawn += Time.deltaTime;
 
-        if(timeSinceLastSpawn >= 1/enemiesPerSecond)
+        if (timeSinceLastSpawn >= 1 / enemiesPerSecond)
         {
-
+            Debug.Log("Spawn");
         }
     }
     private void StartWave()

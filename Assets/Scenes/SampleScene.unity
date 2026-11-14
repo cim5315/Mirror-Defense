@@ -387,7 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae3b2d728e2b5a4dbcfedd492508668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 525764559}
   baseEnemies: 8
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
@@ -999,6 +1000,11 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &525764559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4245091795403861272, guid: 79ef310cece3cb446b8117f9372c2a84, type: 3}
+  m_PrefabInstance: {fileID: 1760209570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &583864493
 GameObject:
   m_ObjectHideFlags: 0
