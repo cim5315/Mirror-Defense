@@ -25,6 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (health < 1)
         {
+            Currency.mainCurrency.Shards += 5;
             Destroy(gameObject);
         }
     }

@@ -3,7 +3,11 @@ using UnityEngine;
 public class Currency : MonoBehaviour
 {
     private int shards;
-    
+    public static Currency mainCurrency;
+    void Awake()
+    {
+        mainCurrency = this;
+    }
     public int Shards
     {
         get { return shards; }
@@ -14,7 +18,7 @@ public class Currency : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        shards = 50;
     }
 
     // Update is called once per frame

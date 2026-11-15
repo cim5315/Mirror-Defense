@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: a080bd5eac307094b9787db594f51893
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6475302210972586583
+    second: er-ui-pause-anim_0
+  - first:
+      213: 2059164396392787229
+    second: er-ui-pause-anim_1
+  - first:
+      213: 568963852870738658
+    second: er-ui-pause-anim_2
+  - first:
+      213: 2277438948455587357
+    second: er-ui-pause-anim_3
+  - first:
+      213: 7849846319495280031
+    second: er-ui-pause-anim_4
+  - first:
+      213: -8828657204713366213
+    second: er-ui-pause-anim_5
+  - first:
+      213: 2287971406917567465
+    second: er-ui-pause-anim_6
+  - first:
+      213: -8626647687494713608
+    second: er-ui-pause-anim_7
+  - first:
+      213: -228072163930132889
+    second: er-ui-pause-anim_8
+  - first:
+      213: -5413470270842949761
+    second: er-ui-pause-anim_9
+  - first:
+      213: 4875251537964469366
+    second: er-ui-pause-anim_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: er-ui-pause-anim_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad6dad52fa1326a0800000000000000
+      internalID: -6475302210972586583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1daf1dcb1f939c10800000000000000
+      internalID: 2059164396392787229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2e5641c9d55e700800000000000000
+      internalID: 568963852870738658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1e955048a61b9f10800000000000000
+      internalID: 2277438948455587357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_4
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f957ce623a140fc60800000000000000
+      internalID: 7849846319495280031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_5
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ddd5d6c0f4a7580800000000000000
+      internalID: -8828657204713366213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_6
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e382955fd180cf10800000000000000
+      internalID: 2287971406917567465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_7
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8febe6852adf74880800000000000000
+      internalID: -8626647687494713608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_8
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76e2ac54399b5dcf0800000000000000
+      internalID: -228072163930132889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_9
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 3
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fa440787d7fd4b0800000000000000
+      internalID: -5413470270842949761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: er-ui-pause-anim_10
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 3
+        width: 39
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c8c0f817f58a340800000000000000
+      internalID: 4875251537964469366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      er-ui-pause-anim_0: -6475302210972586583
+      er-ui-pause-anim_1: 2059164396392787229
+      er-ui-pause-anim_10: 4875251537964469366
+      er-ui-pause-anim_2: 568963852870738658
+      er-ui-pause-anim_3: 2277438948455587357
+      er-ui-pause-anim_4: 7849846319495280031
+      er-ui-pause-anim_5: -8828657204713366213
+      er-ui-pause-anim_6: 2287971406917567465
+      er-ui-pause-anim_7: -8626647687494713608
+      er-ui-pause-anim_8: -228072163930132889
+      er-ui-pause-anim_9: -5413470270842949761
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

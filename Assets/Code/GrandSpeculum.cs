@@ -4,7 +4,12 @@ public class GrandSpeculum : MonoBehaviour
 {
     private int health;
     private int maxHealth = 100;
-    
+    public static GrandSpeculum playerHealth;
+    void Awake()
+    {
+        playerHealth = this;
+    }
+
     public int Health
     {
         get { return health; }
