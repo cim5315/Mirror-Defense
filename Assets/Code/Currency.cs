@@ -1,9 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public class Currency : MonoBehaviour
 {
     private int shards;
     public static Currency mainCurrency;
+    [SerializeField] private TMP_Text currencyText;
     void Awake()
     {
         mainCurrency = this;
@@ -24,7 +26,7 @@ public class Currency : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        currencyText.text = "@X" + shards.ToString("D3");
     }
 
     /// <summary>
