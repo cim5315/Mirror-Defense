@@ -21,15 +21,17 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    public static EnemySpawner main;
 
     private void Awake()
     {
+        main = this;
         onEnemyDestroyed.AddListener(EnemyDestroyed);
     }
 
     private void Start()
     {
-        StartCoroutine(StartWave());
+        
     }
   
     // Update is called once per frame
@@ -63,6 +65,10 @@ public class EnemySpawner : MonoBehaviour
     private void EnemyDestroyed()
     {
         enemiesAlive--;
+    }
+    public void StartNewWave()
+    {
+        StartCoroutine(StartWave());
     }
     private IEnumerator StartWave()
     {

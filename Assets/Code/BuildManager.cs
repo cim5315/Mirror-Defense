@@ -9,6 +9,12 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager main;
 
+    [Header("Input")]
+    [Tooltip("Assign the exact same A button InputActionReference used in HoldAToPause.")]
+    [SerializeField] private InputActionReference placeAction;
+    [Tooltip("Max seconds a press can last to count as a tap instead of a hold.")]
+    [SerializeField] private float maxTapDuration = 0.35f;
+
     [Header("References")]
     [SerializeField] private GameObject[] mirrorPrefabs;
     [SerializeField] private GameObject tileSelector;
@@ -52,6 +58,53 @@ public class BuildManager : MonoBehaviour
     {
         main = this;
     }
+    private void Start()
+    {
+        // Keeps a normal hardware mouse confined to the game window in builds
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+    private void LateUpdate()
+    {
+        if (virtualMouseInput == null || virtualMouseInput.virtualMouse == null) return;
+
+        // 1. Read and clamp the virtual mouse position in screen pixels
+        Vector2 pos = virtualMouseInput.virtualMouse.position.ReadValue();
+        pos.x = Mathf.Clamp(pos.x, padding, Screen.width - padding);
+        pos.y = Mathf.Clamp(pos.y, padding + 20f, Screen.height - padding);
+
+        // 2. Write the clamped pixel position back to the Input System device
+        InputState.Change(virtualMouseInput.virtualMouse.position, pos);
+
+        // 3. Convert screen pixels to Canvas world coordinates for Screen Space - Camera
+        RectTransform cursorRect = virtualMouseInput.cursorTransform;
+        if (cursorRect != null && cursorRect.parent is RectTransform parentRect)
+        {
+            if (RectTransformUtility.ScreenPointToWorldPointInRectangle(
+                parentRect,
+                pos,
+                mainCamera, // Must match the Render Camera assigned on your Canvas
+                out Vector3 worldPos))
+            {
+                cursorRect.position = worldPos;
+            }
+        }
+    }
+    private void OnEnable()
+    {
+        if (placeAction != null && placeAction.action != null)
+        {
+            placeAction.action.Enable();
+            placeAction.action.canceled += OnAButtonReleased;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (placeAction != null && placeAction.action != null)
+        {
+            placeAction.action.canceled -= OnAButtonReleased;
+        }
+    }
 
     public GameObject GetSelectedMirror()
     {
@@ -60,7 +113,7 @@ public class BuildManager : MonoBehaviour
 
     void Update()
     {
-        if (!canPlace || targetTilemap == null) return;
+        if (!canPlace || targetTilemap == null || Time.timeScale == 0f) return;
 
         if (isCurrentlyPlacing)
         {
@@ -88,18 +141,59 @@ public class BuildManager : MonoBehaviour
         }
     }
 
+    private void OnAButtonReleased(InputAction.CallbackContext context)
+    {
+        // Ignore if paused, disabled, or if the player was holding the button down
+        if (!canPlace || Time.timeScale == 0f || context.duration > maxTapDuration)
+            return;
+
+        if (!isCurrentlyPlacing)
+        {
+            // 1st Press: Lock tile and move to rotation picking mode
+            UpdateCursorPosition();
+            Vector3Int cellPosition = GetCellUnderMouse();
+
+            if (IsCellAvailable(cellPosition))
+            {
+                lockedCellPosition = cellPosition;
+                lockedSpawnPosition = targetTilemap.GetCellCenterWorld(cellPosition);
+                CurrentlyPlacing();
+                ShowPreviewForSlice(2);
+            }
+        }
+        else
+        {
+            // 2nd Press: Confirm rotation and spawn mirror
+            int finalSlice = currentPreviewSlice != -1 ? currentPreviewSlice : 2;
+            GetPrefabAndRotation(finalSlice, out GameObject prefabToSpawn, out Quaternion spawnRotation);
+
+            Instantiate(prefabToSpawn, lockedSpawnPosition, spawnRotation);
+            occupiedCells.Add(lockedCellPosition);
+            NotCurrentlyPlacing();
+            LevelManager.main.SelectMirror();
+        }
+    }
+
+    // Call this from HoldAToPause.HeldButton() to cleanly exit placement mode when pausing
+    public void CancelPlacement()
+    {
+        if (isCurrentlyPlacing)
+        {
+            NotCurrentlyPlacing();
+        }
+    }
+
     private void UpdateCursorPosition()
     {
         if (virtualMouseInput != null && virtualMouseInput.virtualMouse != null)
         {
             mouseScreenPos = virtualMouseInput.virtualMouse.position.ReadValue();
-            mouseScreenPos.x = Mathf.Clamp(mouseScreenPos.x, padding, Screen.width - padding);
-            mouseScreenPos.y = Mathf.Clamp(mouseScreenPos.y, padding + 20, Screen.height - padding);
-            InputState.Change(virtualMouseInput.virtualMouse.position, mouseScreenPos);
         }
         else if (Mouse.current != null)
         {
             mouseScreenPos = Mouse.current.position.ReadValue();
+            mouseScreenPos.x = Mathf.Clamp(mouseScreenPos.x, padding, Screen.width - padding);
+            mouseScreenPos.y = Mathf.Clamp(mouseScreenPos.y, padding + 20f, Screen.height - padding);
         }
     }
 
@@ -114,39 +208,6 @@ public class BuildManager : MonoBehaviour
     private bool IsCellAvailable(Vector3Int cell)
     {
         return !targetTilemap.HasTile(cell) && !occupiedCells.Contains(cell);
-    }
-
-    public void Click(InputAction.CallbackContext context)
-    {
-        if (!canPlace || !context.performed || isCurrentlyPlacing) return;
-
-        UpdateCursorPosition();
-        Vector3Int cellPosition = GetCellUnderMouse();
-
-        if (IsCellAvailable(cellPosition))
-        {
-            lockedCellPosition = cellPosition;
-            lockedSpawnPosition = targetTilemap.GetCellCenterWorld(cellPosition);
-            CurrentlyPlacing();
-            ShowPreviewForSlice(2);
-        }
-    }
-
-    public void Spawn(InputAction.CallbackContext context)
-    {
-        // Only spawn when the button is released (canceled)
-        if (!canPlace || !context.canceled || !isCurrentlyPlacing) return;
-
-        if (context.duration <= 1.0)
-        {
-            int finalSlice = currentPreviewSlice != -1 ? currentPreviewSlice : 2;
-            GetPrefabAndRotation(finalSlice, out GameObject prefabToSpawn, out Quaternion spawnRotation);
-
-            Instantiate(prefabToSpawn, lockedSpawnPosition, spawnRotation);
-            occupiedCells.Add(lockedCellPosition);
-        }
-
-        NotCurrentlyPlacing();
     }
 
     private void UpdatePlacementPreview()
@@ -229,5 +290,14 @@ public class BuildManager : MonoBehaviour
         }
 
         rotation = Quaternion.Euler(0f, 0f, rotationOffset);
+    }
+    public void SelectedBasicMirror()
+    {
+        if (Currency.mainCurrency.HaveEnoughShards(20))
+        {
+            selectedMirror = 0;
+            LevelManager.main.PlaceMirror();
+
+        }
     }
 }

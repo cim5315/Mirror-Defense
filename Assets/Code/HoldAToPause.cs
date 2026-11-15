@@ -34,8 +34,7 @@ public class HoldAToPause : MonoBehaviour
 
     private void OnDisable()
     {
-        if (holdAction != null && holdAction.action != null)
-            holdAction.action.Disable();
+        
     }
 
     private void Start()
@@ -93,6 +92,13 @@ public class HoldAToPause : MonoBehaviour
     }
     public void HeldButton()
     {
+        if (BuildManager.main != null)
+        {
+            BuildManager.main.CancelPlacement();
+        }
+
         pauseMenu.SetActive(true);
+        Pause.main.PauseTime();
     }
+
 }

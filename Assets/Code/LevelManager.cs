@@ -46,10 +46,21 @@ public class LevelManager : MonoBehaviour
     {
         isBuildingPhase = false;
         startRoundButton.SetActive(false);
+        EnemySpawner.main.StartNewWave();
     }
     public void EndRound()
     {
         isBuildingPhase = false;
         startRoundButton.SetActive(true);
+    }
+    public void PlaceMirror()
+    {
+        isSelectMirrorMode = false;
+        isPlaceMirrorMode = true;
+    }
+    public void SelectMirror()
+    {
+        isSelectMirrorMode = true;
+        isPlaceMirrorMode = false;
     }
 }
