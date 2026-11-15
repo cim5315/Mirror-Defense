@@ -165,8 +165,8 @@ MonoBehaviour:
   firingPointRU: {fileID: 1917332636647980437}
   firingPointRD: {fileID: 2286616344536375516}
   fireR: 0
-  fireRU: 1
-  fireRD: 1
+  fireRU: 0
+  fireRD: 0
   firingSpeed: 1
 --- !u!114 &-3757101794166637784
 MonoBehaviour:
@@ -261,7 +261,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5942149972505616852, guid: af590205c9116cb41a44ca6b8938e8c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

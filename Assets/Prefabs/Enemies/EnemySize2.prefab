@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917332636647980437}
   m_Layer: 0
-  m_Name: FiringPoint
+  m_Name: FiringPointR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1466622360314750343}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.525, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4375, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -251,7 +251,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyShoot
   bulletPrefab: {fileID: 5171620546247765230, guid: 80955b5fef6a6f149a586d4580f0fb61, type: 3}
-  firingPoint: {fileID: 1917332636647980437}
+  firingPointR: {fileID: 1917332636647980437}
+  firingPointRU: {fileID: 0}
+  firingPointRD: {fileID: 0}
+  fireR: 1
+  fireRU: 0
+  fireRD: 0
   firingSpeed: 1
 --- !u!114 &-3757101794166637784
 MonoBehaviour:
