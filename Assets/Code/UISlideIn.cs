@@ -4,7 +4,8 @@ using UnityEngine;
 public class UISlideIn : MonoBehaviour
 {
     public RectTransform uiPanel;
-    public Vector2 targetPosition = Vector2.zero; // Center of the screen
+    public Vector2 targetInPosition = Vector2.zero;
+    public Vector2 targetOutPosition = Vector2.zero;
     public float duration = 0.5f;
     public static UISlideIn uISlideIn;
     private void Awake()
@@ -14,6 +15,11 @@ public class UISlideIn : MonoBehaviour
     public void SlideIn()
     {
         // Smoothly moves anchoredPosition with a natural slow-down at the end
-        uiPanel.DOAnchorPos(targetPosition, duration).SetEase(Ease.OutCubic);
+        uiPanel.DOAnchorPos(targetInPosition, duration).SetEase(Ease.OutCubic);
+    }
+    public void SlideOut()
+    {
+        // Smoothly moves anchoredPosition with a natural slow-down at the end
+        uiPanel.DOAnchorPos(targetOutPosition, duration).SetEase(Ease.OutCubic);
     }
 }

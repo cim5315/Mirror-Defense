@@ -5,7 +5,9 @@ public class LevelManager : MonoBehaviour
     public static LevelManager main;
     public Transform startPoint;
     public Transform[] path;
-    public bool isBuildPhase = true;
+    public bool isBuildingPhase = true;
+    public bool isSelectMirrorMode = true;
+    public bool isPlaceMirrorMode = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -16,11 +18,17 @@ public class LevelManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        UISlideIn.uISlideIn.SlideIn();
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (isSelectMirrorMode)
+        {
+            UISlideIn.uISlideIn.SlideIn();
+        }
+        else
+        {
+            UISlideIn.uISlideIn.SlideOut();
+        }
     }
 }

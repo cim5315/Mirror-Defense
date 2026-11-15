@@ -30,22 +30,11 @@
                     "id": "335e8b93-ab37-4b16-9947-755322c9e26f",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(duration=1)",
                     "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "11ad1a8a-f8fc-4968-85b8-6938796229c1",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "5ece3263-1a24-4583-b45d-f72295ed5b5b",
