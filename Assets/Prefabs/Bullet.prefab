@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 8
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4454868067649321459, guid: 37ff54a7396f6454e8ad56d624684d33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -170,7 +170,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 11
   m_MaskInteraction: 0
   m_Sprite: {fileID: -7361013968615626081, guid: ac010be000e35544da284218d9007a05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -261,7 +261,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3674764199153896416, guid: 6e91e5b29b154104f8b01910347244f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -352,7 +352,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: -909949214174059063, guid: 3892392ff8663634ba1a31e82b34aefa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -451,7 +451,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4293398002356903487, guid: 584c064684906d74084fe45fe2cd73a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -498,7 +498,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.16
 --- !u!50 &1851482419797152715
 Rigidbody2D:
   serializedVersion: 5
@@ -539,8 +539,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   rigidbody2D: {fileID: 1851482419797152715}
-  enemyType: 0000000000000000000000000000000000000000
+  bulletType:
+  - {fileID: 8950580772455282396}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 4141523658055389494}
+  - {fileID: 2646519546785941531}
+  - {fileID: 4259239674978577245}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyBullet: {fileID: 2520242496160803167}
   bulletSpeed: 3
+  bulletLifeSpan: 10
 --- !u!1 &8950580772455282396
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +632,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 7
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4151245603869884726, guid: a5476177de24aeb40aceeaa76004d991, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

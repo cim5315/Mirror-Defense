@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - BasicMirror
+  - DamageMirror
+  - EnragingMirror
+  - ExplosiveMirror
+  - MagnetMirror
+  - HomingMirror
+  - PoisonMirror
+  - SlowingMirror
+  - SpeedMirror
+  - SplittingMirror
   layers:
   - Default
   - TransparentFX
