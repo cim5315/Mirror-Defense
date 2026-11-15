@@ -14,15 +14,15 @@ public class GrandSpeculumHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GrandSpeculum.playerHealth.Health <= 25)
+        if (GrandSpeculum.playerHealth.HealthPercentage() <= 25)
         {
             ChangeFrame(3);
         }
-        else if (GrandSpeculum.playerHealth.Health <= 50)
+        else if (GrandSpeculum.playerHealth.HealthPercentage() <= 50)
         {
             ChangeFrame(2);
         }
-        else if (GrandSpeculum.playerHealth.Health <= 75)
+        else if (GrandSpeculum.playerHealth.HealthPercentage() <= 75)
         {
             ChangeFrame(1);
         }

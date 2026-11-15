@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class GrandSpeculum : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class GrandSpeculum : MonoBehaviour
     private int maxHealth = 100;
     public static GrandSpeculum playerHealth;
     [SerializeField] private TMP_Text healthText;
+    public Slider healthSlider;
     void Awake()
     {
         playerHealth = this;
@@ -40,6 +43,8 @@ public class GrandSpeculum : MonoBehaviour
     void Update()
     {
         healthText.text = health.ToString("D3") + "/" + maxHealth.ToString("D3");
+
+        healthSlider.value = HealthPercentage();
     }
 
     public bool IsBroken()
@@ -54,8 +59,8 @@ public class GrandSpeculum : MonoBehaviour
         }
     }
 
-    public double HealthPercentage()
+    public float HealthPercentage()
     {
-        return health / (double)maxHealth;
+        return (health / (float)maxHealth) * 100;
     }
 }
