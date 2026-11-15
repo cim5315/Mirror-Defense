@@ -622,8 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96438436490aacf42a4eb877367f32b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtonManager
-  levelName: 
-  settings: 
+  levelName: ConnorTest
 --- !u!1 &926696093
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,8 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96438436490aacf42a4eb877367f32b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  levelName: 
-  settings: 
+  levelName: ConnorTest
 --- !u!1 &1103392492
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 public class MenuButtonManager : MonoBehaviour
 {
     public string levelName;
-    public string settings;
+    //public string settings;
 
     public void PlayGame()
     {
@@ -11,12 +11,13 @@ public class MenuButtonManager : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
+    /*
     public void GoSettings()
     {
         Debug.Log("load settings");
         SceneManager.LoadScene(settings);
     }
-
+    */
     public void QuitGame()
     {
         Debug.Log("quit");
