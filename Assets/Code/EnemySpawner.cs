@@ -22,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
     public static EnemySpawner main;
+    
 
     private void Awake()
     {
@@ -59,7 +60,7 @@ public class EnemySpawner : MonoBehaviour
     }
     private void SpawnEnemy()
     {
-        GameObject prefabToSpawn = enemyPrefabs[0];
+        GameObject prefabToSpawn = enemyPrefabs[Random.Range(0, (Mathf.Clamp(currentWave, 0, enemyPrefabs.Length)))];
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
     private void EnemyDestroyed()
