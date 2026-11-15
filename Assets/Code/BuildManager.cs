@@ -173,7 +173,7 @@ public class BuildManager : MonoBehaviour
 
     public void Spawn(InputAction.CallbackContext context)
     {
-        if (context.performed && isCurrentlyPlacing)
+        if (!(context.duration > 1) && isCurrentlyPlacing)
         {
             int finalSlice = currentPreviewSlice != -1 ? currentPreviewSlice : 2;
             GetPrefabAndRotation(finalSlice, out GameObject prefabToSpawn, out Quaternion spawnRotation);
