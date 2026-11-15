@@ -8,7 +8,7 @@ public class MenuButtonManager : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("load level");
-        //SceneManager.LoadScene(LevelName);
+        SceneManager.LoadScene(LevelName);
     }
 
     public void GoSettings()
