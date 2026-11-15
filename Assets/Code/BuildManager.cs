@@ -35,6 +35,7 @@ public class BuildManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (virtualMouseInput != null)
         {
             mouseScreenPos = virtualMouseInput.virtualMouse.position.ReadValue();
@@ -42,7 +43,7 @@ public class BuildManager : MonoBehaviour
         }
         else
         {
-            //  mouseScreenPos = Mouse.current.position.ReadValue();
+            mouseScreenPos = Mouse.current.position.ReadValue();
         }
         if (Mouse.current == null || targetTilemap == null) return;
 
