@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2273468922981687704}
   - component: {fileID: 4745726178734764290}
   - component: {fileID: 3813071216652029301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: PoisonMirror
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5527018142397519592}
   - component: {fileID: 205624874365089933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_poison_d_0
   m_TagString: PoisonMirror
   m_Icon: {fileID: 0}

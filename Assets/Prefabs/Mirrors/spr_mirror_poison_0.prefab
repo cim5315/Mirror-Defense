@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8750080337730906245}
   - component: {fileID: 717438530815920125}
   - component: {fileID: 7217130867910716105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_poison_0
   m_TagString: PoisonMirror
   m_Icon: {fileID: 0}

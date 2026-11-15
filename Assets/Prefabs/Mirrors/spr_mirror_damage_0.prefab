@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 865944941420215979}
   - component: {fileID: 4394704623239657717}
   - component: {fileID: 4034690326006675851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_damage_0
   m_TagString: DamageMirror
   m_Icon: {fileID: 0}

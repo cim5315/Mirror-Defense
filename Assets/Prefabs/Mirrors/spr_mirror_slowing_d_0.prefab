@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648078132838174246}
   - component: {fileID: 5501351963434641074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_slowing_d_0
   m_TagString: SlowingMirror
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3037974247496725937}
   - component: {fileID: 4237912044973212345}
   - component: {fileID: 5718112097423559375}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: SlowingMirror
   m_Icon: {fileID: 0}

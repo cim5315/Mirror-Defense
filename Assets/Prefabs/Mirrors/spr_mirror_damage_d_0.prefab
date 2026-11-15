@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 740284528011242744}
   - component: {fileID: 6538082273065370315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_damage_d_0
   m_TagString: DamageMirror
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3622158278346125366}
   - component: {fileID: 7457253816005577660}
   - component: {fileID: 5749865015299872779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: DamageMirror
   m_Icon: {fileID: 0}
