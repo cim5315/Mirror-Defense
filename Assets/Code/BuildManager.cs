@@ -207,4 +207,5 @@ public class BuildManager : MonoBehaviour
         }
         rotation = Quaternion.Euler(0f, 0f, rotationOffset);
     }
+    
 }
