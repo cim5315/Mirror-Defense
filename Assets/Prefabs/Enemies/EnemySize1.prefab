@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1466622360314750343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917332636647980437}
+  m_Layer: 0
+  m_Name: FiringPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1917332636647980437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466622360314750343}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.445, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4644621131409895107}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4245091795403861272
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,6 +65,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6129586975437509800}
+  - {fileID: 1917332636647980437}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2778701808874901039
@@ -112,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 2778701808874901039}
-  moveSpeed: 2
+  moveSpeed: 1
   target: {fileID: 0}
 --- !u!114 &4334245948762164765
 MonoBehaviour:
@@ -127,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyShoot
   bulletPrefab: {fileID: 5171620546247765230, guid: 80955b5fef6a6f149a586d4580f0fb61, type: 3}
-  firingPoint: {fileID: 4644621131409895107}
+  firingPoint: {fileID: 1917332636647980437}
   firingSpeed: 1
 --- !u!1 &6545470020785719280
 GameObject:
@@ -208,7 +240,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7561951670594352239, guid: 3011b0af097566c4aad32ad7ec3994fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
