@@ -272,6 +272,8 @@ GameObject:
   - component: {fileID: 216881225}
   - component: {fileID: 216881226}
   - component: {fileID: 216881227}
+  - component: {fileID: 216881229}
+  - component: {fileID: 216881228}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -360,6 +362,7 @@ MonoBehaviour:
   virtualMouseInput: {fileID: 1394116862}
   cursor: {fileID: 1394116860}
   rotationGuideActual: {fileID: 3414295895097082407, guid: d477fa3700dc2ee4dbcc41090505d151, type: 3}
+  padding: 0
 --- !u!114 &216881227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,6 +441,30 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &216881228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216881222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ced52b20f3aac43a861a8e03d03ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GrandSpeculum
+--- !u!114 &216881229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216881222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2eda78ab04a794b8b15322337cb8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Currency
 --- !u!1 &308361065
 GameObject:
   m_ObjectHideFlags: 0

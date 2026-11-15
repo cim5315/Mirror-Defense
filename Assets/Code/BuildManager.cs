@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.Tilemaps;
 
@@ -26,6 +27,8 @@ public class BuildManager : MonoBehaviour
     public GameObject cursor;
     public GameObject rotationGuideActual;
 
+    public float padding = 0;
+
     private Vector2 stickDirection;
     private Vector3Int previousCell = new Vector3Int(int.MaxValue, int.MaxValue, int.MaxValue);
     private int selectedMirror = 0;
@@ -50,6 +53,7 @@ public class BuildManager : MonoBehaviour
 
     void Update()
     {
+        
         if (targetTilemap == null) return;
 
         if (isCurrentlyPlacing)
@@ -61,6 +65,9 @@ public class BuildManager : MonoBehaviour
         if (virtualMouseInput != null)
         {
             mouseScreenPos = virtualMouseInput.virtualMouse.position.ReadValue();
+            mouseScreenPos.x = Mathf.Clamp(mouseScreenPos.x, padding, Screen.width - padding);
+            mouseScreenPos.y = Mathf.Clamp(mouseScreenPos.y, padding + 20, Screen.height - padding);
+            InputState.Change(virtualMouseInput.virtualMouse.position, mouseScreenPos);
         }
         else
         {

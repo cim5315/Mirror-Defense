@@ -12,7 +12,11 @@ public class LevelManager : MonoBehaviour
     {
         main = this;
     }
-
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
     // Update is called once per frame
     void Update()
     {
