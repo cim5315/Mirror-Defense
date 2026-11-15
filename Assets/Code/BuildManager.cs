@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,6 +17,7 @@ public class BuildManager : MonoBehaviour
     private Vector3Int previousCell = new Vector3Int(int.MaxValue, int.MaxValue, int.MaxValue);
     private int selectedMirror = 0;
     private GameObject tileSelected;
+    public bool isInvalidTile;
     public VirtualMouseInput virtualMouseInput;
     private Vector2 mouseScreenPos;
     private void Awake()
@@ -68,7 +70,7 @@ public class BuildManager : MonoBehaviour
 
             Vector3 spawnPosition = targetTilemap.GetCellCenterWorld(cellPosition);
 
-            if (targetTilemap.HasTile(currentCell))
+            if (!targetTilemap.HasTile(currentCell))
             {
                 TileBase hoveredTile = targetTilemap.GetTile(currentCell);
                 tileSelected = Instantiate(tileSelector, spawnPosition, Quaternion.identity);
@@ -93,9 +95,22 @@ public class BuildManager : MonoBehaviour
 
             // Convert world position to tilemap cell position
             Vector3Int cellPosition = targetTilemap.WorldToCell(mouseWorldPos);
+            
 
             Vector3 spawnPosition = targetTilemap.GetCellCenterWorld(cellPosition);
-            Instantiate(GetSelectedMirror(), spawnPosition, Quaternion.identity);
+            if (targetTilemap.HasTile(cellPosition))
+            {
+                isInvalidTile = true;
+            }
+            else
+            {
+                isInvalidTile = false;
+            }
+            if (isInvalidTile == false)
+            {
+                Instantiate(GetSelectedMirror(), spawnPosition, Quaternion.identity);
+            }
+            
         }
     }
 }
