@@ -2,19 +2,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuButtonManager : MonoBehaviour
 {
-    public string LevelName;
-    public string Settings;
+    public string levelName;
+    public string settings;
 
     public void PlayGame()
     {
         Debug.Log("load level");
-        SceneManager.LoadScene(LevelName);
+        SceneManager.LoadScene(levelName);
     }
 
     public void GoSettings()
     {
         Debug.Log("load settings");
-        //SceneManager.LoadScene(Settings);
+        SceneManager.LoadScene(settings);
     }
 
     public void QuitGame()
