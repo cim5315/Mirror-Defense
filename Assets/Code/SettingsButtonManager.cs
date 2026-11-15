@@ -10,9 +10,4 @@ public class SettingsButtonManager : MonoBehaviour
         Debug.Log("load menu");
         SceneManager.LoadScene(mainMenu);
     }
-
-    public void Volume()
-    {
-        Debug.Log("Pretend this changes the volume of something");
-    }
 }
