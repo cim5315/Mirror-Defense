@@ -3,7 +3,12 @@ using UnityEngine;
 public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform firingPoint;
+    [SerializeField] private Transform firingPointR;
+    [SerializeField] private Transform firingPointRU;
+    [SerializeField] private Transform firingPointRD;
+    [SerializeField] private bool fireR;
+    [SerializeField] private bool fireRU;
+    [SerializeField] private bool fireRD;
     [SerializeField] private float firingSpeed = 1f;
 
     private float timeUntilFire;
@@ -26,7 +31,24 @@ public class EnemyShoot : MonoBehaviour
     }
     private void Shoot()
     {
-        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
-        Bullet bulletScript = bulletObj.GetComponent<Bullet>();
+        if (fireR)
+        {
+            GameObject bulletObj = Instantiate(bulletPrefab, firingPointR.transform.position, firingPointR.transform.rotation);
+            Bullet bulletScript = bulletObj.GetComponent<Bullet>();
+        }
+
+        if (fireRU)
+        {
+            GameObject bulletObj = Instantiate(bulletPrefab, firingPointRU.transform.position, firingPointRU.transform.rotation);
+            Bullet bulletScript = bulletObj.GetComponent<Bullet>();
+        }
+
+        if (fireRD)
+        {
+            GameObject bulletObj = Instantiate(bulletPrefab, firingPointRD.transform.position, firingPointRD.transform.rotation);
+            Bullet bulletScript = bulletObj.GetComponent<Bullet>();
+        }
+
+
     }
 }
