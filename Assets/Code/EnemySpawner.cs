@@ -81,7 +81,7 @@ public class EnemySpawner : MonoBehaviour
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currentWave++;
-        StartCoroutine(StartWave());
+        LevelManager.main.EndRound();
     }
     private int EnemiesPerWave()
     {
