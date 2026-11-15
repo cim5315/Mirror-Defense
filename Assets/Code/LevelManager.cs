@@ -50,8 +50,9 @@ public class LevelManager : MonoBehaviour
     }
     public void EndRound()
     {
-        isBuildingPhase = false;
+        isBuildingPhase = true;
         startRoundButton.SetActive(true);
+        isSelectMirrorMode = true;
     }
     public void PlaceMirror()
     {

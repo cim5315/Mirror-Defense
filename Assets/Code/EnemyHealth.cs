@@ -25,8 +25,8 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Debug.Log("Dead");
             Currency.mainCurrency.Shards += 5;
+            EnemySpawner.onEnemyDestroyed.Invoke();
             Destroy(gameObject);
         }
     }
@@ -36,7 +36,6 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
-            Debug.Log("Yes");
             TakeDamage(2);
             Destroy(collision.gameObject);
         }
