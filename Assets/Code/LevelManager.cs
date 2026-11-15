@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     public bool isBuildingPhase = true;
     public bool isSelectMirrorMode = true;
     public bool isPlaceMirrorMode = false;
+    public GameObject startRoundButton;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -40,5 +41,15 @@ public class LevelManager : MonoBehaviour
             UISlideIn.uISlideIn.SlideOut();
             BuildManager.main.CanPlace = false;
         }
+    }
+    public void StartRound()
+    {
+        isBuildingPhase = false;
+        startRoundButton.SetActive(false);
+    }
+    public void EndRound()
+    {
+        isBuildingPhase = false;
+        startRoundButton.SetActive(true);
     }
 }
