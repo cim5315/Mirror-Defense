@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,6 +19,10 @@ public class BuildManager : MonoBehaviour
     private GameObject tileSelected;
     public VirtualMouseInput virtualMouseInput;
     private Vector2 mouseScreenPos;
+    private bool isCurrentlyPlacing = false;
+    public GameObject cursor;
+    private GameObject rotationGuide;
+    public GameObject rotationGuideActual;
     private void Awake()
     {
         main = this;
@@ -68,10 +73,13 @@ public class BuildManager : MonoBehaviour
 
             Vector3 spawnPosition = targetTilemap.GetCellCenterWorld(cellPosition);
 
-            if (targetTilemap.HasTile(currentCell))
+            if (!targetTilemap.HasTile(currentCell) && !isCurrentlyPlacing)
             {
                 TileBase hoveredTile = targetTilemap.GetTile(currentCell);
                 tileSelected = Instantiate(tileSelector, spawnPosition, Quaternion.identity);
+                rotationGuide = Instantiate(rotationGuideActual, spawnPosition, Quaternion.identity);
+                NotCurrentlyPlacing();
+
             }
         }
     }
@@ -82,20 +90,32 @@ public class BuildManager : MonoBehaviour
             if (virtualMouseInput != null)
             {
                 mouseScreenPos = virtualMouseInput.virtualMouse.position.ReadValue();
-                Debug.Log("works");
-            }
-            else
-            {
-                //  mouseScreenPos = Mouse.current.position.ReadValue();
             }
             // Convert mouse screen position to world position
             Vector2 mouseWorldPos = mainCamera.ScreenToWorldPoint(mouseScreenPos);
 
             // Convert world position to tilemap cell position
             Vector3Int cellPosition = targetTilemap.WorldToCell(mouseWorldPos);
-
+            
             Vector3 spawnPosition = targetTilemap.GetCellCenterWorld(cellPosition);
-            Instantiate(GetSelectedMirror(), spawnPosition, Quaternion.identity);
+            
+            if (!targetTilemap.HasTile(cellPosition) && !isCurrentlyPlacing)
+            {
+                Instantiate(GetSelectedMirror(), spawnPosition, Quaternion.identity);
+                CurrentlyPlacing();
+            }
         }
+    }
+    public void CurrentlyPlacing()
+    {
+        cursor.SetActive(false);
+        rotationGuide.SetActive(true);
+        tileSelected.SetActive(false);
+    }
+    public void NotCurrentlyPlacing()
+    {
+        cursor.SetActive(true);
+        rotationGuide.SetActive(false);
+        tileSelected.SetActive(true);
     }
 }
