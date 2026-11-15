@@ -1,0 +1,43 @@
+using UnityEngine;
+
+public class Currency : MonoBehaviour
+{
+    private int shards;
+    
+    public int Shards
+    {
+        get { return shards; }
+        
+        set { shards = value; }
+    }
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    /// <summary>
+    /// Checks if you have enough shards and spends them if you do
+    /// </summary>
+    /// <param name="cost">The cost of the item</param>
+    /// <returns>If you have enough shards</returns>
+    public bool HaveEnoughShards(int cost)
+    {
+        if (cost > shards)
+        {
+            return false;
+        }
+        else
+        {
+            shards -= cost;
+            return true;
+        }
+    }
+}
