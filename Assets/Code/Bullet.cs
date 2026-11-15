@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidbody2D;
     [SerializeField] private GameObject[] bulletType = new GameObject[10];
     [SerializeField] private SpriteRenderer enemyBullet;
+    [SerializeField] private AudioSource deflectSound;
+    [SerializeField] private AudioSource destroySound;
 
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 5f;
@@ -26,11 +28,13 @@ public class Bullet : MonoBehaviour
         bulletLifeSpan -= Time.deltaTime;
         if (bulletLifeSpan <= 0)
         {
+            destroySound.Play();
             Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        destroySound.Play();
         Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -40,60 +44,70 @@ public class Bullet : MonoBehaviour
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             Debug.Log("hit");
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("DamageMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[1].SetActive(true);
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("EnragingMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[2].SetActive(true);
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("ExplosiveMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[3].SetActive(true);
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("MagnetMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[4].SetActive(true);
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("HomingMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[5].SetActive(true);
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("PoisonMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[6].SetActive(true);
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("SlowingMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[7].SetActive(true);
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("SpeedMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[8].SetActive(true);
+            deflectSound.Play();
         }
         if (collision.gameObject.CompareTag("SplittingMirror"))
         {
             enemyBullet.enabled = false;
             bulletType[0].SetActive(true);
             bulletType[9].SetActive(true);
+            deflectSound.Play();
         }
     }
 }
