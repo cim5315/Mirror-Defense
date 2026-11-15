@@ -463,6 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 354520042}
   - component: {fileID: 354520043}
+  - component: {fileID: 354520044}
   m_Layer: 5
   m_Name: AudioSlider
   m_TagString: Untagged
@@ -543,8 +544,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1149201081}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 354520044}
+        m_TargetAssemblyTypeName: AudioSliderManager, Assembly-CSharp
         m_MethodName: ChangeVolume
         m_Mode: 1
         m_Arguments:
@@ -555,6 +556,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &354520044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354520041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a4feb914225a24fa11a72606ba6813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  slider: {fileID: 354520043}
+  audioManager: {fileID: 1149201080}
 --- !u!1 &413229408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c908c590bea54e44b21ba66c5dab12d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  audioSlider: {fileID: 354520041}
 --- !u!4 &1149201082
 Transform:
   m_ObjectHideFlags: 0

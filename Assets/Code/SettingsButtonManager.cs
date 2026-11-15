@@ -4,10 +4,9 @@ using UnityEngine.SceneManagement;
 public class SettingsButtonManager : MonoBehaviour
 {
     public string mainMenu;
-
-    public void GoMenu()
+    public void Back()
     {
-        Debug.Log("load menu");
+        Debug.Log("go back");
         SceneManager.LoadScene(mainMenu);
     }
 }
