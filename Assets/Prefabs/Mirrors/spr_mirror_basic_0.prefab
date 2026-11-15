@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7899344895095454317}
   - component: {fileID: 5893177346396899305}
   - component: {fileID: 6301149724613754907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_basic_0
   m_TagString: BasicMirror
   m_Icon: {fileID: 0}

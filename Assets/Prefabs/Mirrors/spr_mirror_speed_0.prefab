@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4179494421273999596}
   - component: {fileID: 8515291664678684682}
   - component: {fileID: 1034177334019964913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_speed_0
   m_TagString: SpeedMirror
   m_Icon: {fileID: 0}

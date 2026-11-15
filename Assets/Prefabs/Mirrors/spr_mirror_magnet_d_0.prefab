@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2544828854877925442}
   - component: {fileID: 3820783776007391534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_magnet_d_0
   m_TagString: MagnetMirror
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3224033687797932707}
   - component: {fileID: 6578239029299684965}
   - component: {fileID: 1255092703854413598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: MagnetMirror
   m_Icon: {fileID: 0}

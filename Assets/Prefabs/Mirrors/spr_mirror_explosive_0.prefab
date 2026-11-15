@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2401069476134511554}
   - component: {fileID: 6818615388675905004}
   - component: {fileID: 8436604591799542718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_explosive_0
   m_TagString: ExplosiveMirror
   m_Icon: {fileID: 0}

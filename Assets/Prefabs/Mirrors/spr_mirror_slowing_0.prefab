@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6974388951357619736}
   - component: {fileID: 6410149857846513582}
   - component: {fileID: 7026424925030622891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_slowing_0
   m_TagString: SlowingMirror
   m_Icon: {fileID: 0}
