@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 5686ca4e9d2b2a54eabde8193195b140
+guid: 3df65e99c0dc6854cb852a1fdc66b16c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6208809070225190941
-    second: er-bigmirror-tile_0
+      213: -2776983276217025644
+    second: er-bigmirror-tile 1_0
+  - first:
+      213: -5485786634974437730
+    second: er-bigmirror-tile 1_1
+  - first:
+      213: -4367357764182944596
+    second: er-bigmirror-tile 1_2
+  - first:
+      213: -2767214732058008154
+    second: er-bigmirror-tile 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,111 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: er-bigmirror-tile_0
+      name: er-bigmirror-tile 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 1
+        y: 1
         width: 16
-        height: 16
+        height: 78
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ef010bdb01e5d9a0800000000000000
-      internalID: -6208809070225190941
+      spriteID: 49b32e16c6c2679d0800000000000000
+      internalID: -2776983276217025644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: er-bigmirror-tile_1
+      name: er-bigmirror-tile 1_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 17
+        y: 1
         width: 16
-        height: 16
+        height: 78
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e07e71497a138e240b650b8117559f63
-      internalID: 1370348024
+      spriteID: e9e53c4de129ed3b0800000000000000
+      internalID: -5485786634974437730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: er-bigmirror-tile_2
+      name: er-bigmirror-tile 1_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 33
+        y: 2
         width: 16
-        height: 16
+        height: 76
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 78eaffc051fe1f141928cf3ba2524a87
-      internalID: -1098646383
+      spriteID: ca4d4d2b0470463c0800000000000000
+      internalID: -4367357764182944596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: er-bigmirror-tile_3
+      name: er-bigmirror-tile 1_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
+        x: 49
+        y: 3
+        width: 15
+        height: 73
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 00639c59d7f03634c9337efd0ff8fc89
-      internalID: 2046434289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: er-bigmirror-tile_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57eacbb8cbfeb484abd381e9ae7dc2fe
-      internalID: 477637469
+      spriteID: 6a5647eccd0e899d0800000000000000
+      internalID: -2767214732058008154
       vertices: []
       indices: 
       edges: []
@@ -213,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 910b9d49413942344a17da87468ad251
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -221,15 +208,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      er-bigmirror-tile_0: -6208809070225190941
-      er-bigmirror-tile_1: 1370348024
-      er-bigmirror-tile_2: -1098646383
-      er-bigmirror-tile_3: 2046434289
-      er-bigmirror-tile_4: 477637469
+      er-bigmirror-tile 1_0: -2776983276217025644
+      er-bigmirror-tile 1_1: -5485786634974437730
+      er-bigmirror-tile 1_2: -4367357764182944596
+      er-bigmirror-tile 1_3: -2767214732058008154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
