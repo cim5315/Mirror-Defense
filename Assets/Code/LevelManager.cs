@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+        UISlideIn.uISlideIn.SlideIn();
     }
     // Update is called once per frame
     void Update()
