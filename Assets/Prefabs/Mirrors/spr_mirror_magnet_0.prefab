@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4443084015372311862}
   - component: {fileID: 3289552827077219379}
   - component: {fileID: 8829183302424473380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_magnet_0
   m_TagString: MagnetMirror
   m_Icon: {fileID: 0}

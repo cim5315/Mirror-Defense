@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5216396107602827092}
   - component: {fileID: 708083086405116632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_engraging_d_0
   m_TagString: EnragingMirror
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3593525802326731767}
   - component: {fileID: 1712997648999641114}
   - component: {fileID: 8507195439683797256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: EnragingMirror
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8776438817334267700}
   - component: {fileID: 7885306288565101626}
   - component: {fileID: 838762711996337489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_homing_0
   m_TagString: HomingMirror
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8956267827027400572}
   - component: {fileID: 4305303141937811429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_speed_d_0
   m_TagString: SpeedMirror
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3849420600595664316}
   - component: {fileID: 103481715194308480}
   - component: {fileID: 3529443026268998837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: SpeedMirror
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4557532466112790206}
   - component: {fileID: 7082917182006062750}
   - component: {fileID: 3303973564191116024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_splitting_0
   m_TagString: SplittingMirror
   m_Icon: {fileID: 0}

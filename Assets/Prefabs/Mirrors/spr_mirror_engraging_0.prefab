@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1252816464576709400}
   - component: {fileID: 7743271883831358220}
   - component: {fileID: 3873787406537356156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_engraging_0
   m_TagString: EnragingMirror
   m_Icon: {fileID: 0}

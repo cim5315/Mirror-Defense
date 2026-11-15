@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5573563434654932787}
   - component: {fileID: 1748354194328533200}
   - component: {fileID: 4334245948762164765}
+  - component: {fileID: -3757101794166637784}
   m_Layer: 6
   m_Name: EnemySize1
   m_TagString: Enemy
@@ -161,6 +162,20 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5171620546247765230, guid: 80955b5fef6a6f149a586d4580f0fb61, type: 3}
   firingPoint: {fileID: 1917332636647980437}
   firingSpeed: 1
+--- !u!114 &-3757101794166637784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245091795403861272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa595370dd78ee47a9e8b3e47f35120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  health: 0
+  maxHealth: 2
 --- !u!1 &6545470020785719280
 GameObject:
   m_ObjectHideFlags: 0

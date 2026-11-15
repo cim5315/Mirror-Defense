@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7124059920991480235}
   - component: {fileID: 938875099361142432}
   - component: {fileID: 4487245365536216496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: SplittingMirror
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994884120181527861}
   - component: {fileID: 4630929345531810501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spr_mirror_splitting_d_0
   m_TagString: SplittingMirror
   m_Icon: {fileID: 0}
