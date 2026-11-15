@@ -1,10 +1,12 @@
 using UnityEngine;
+using TMPro;
 
 public class GrandSpeculum : MonoBehaviour
 {
     private int health;
     private int maxHealth = 100;
     public static GrandSpeculum playerHealth;
+    [SerializeField] private TMP_Text healthText;
     void Awake()
     {
         playerHealth = this;
@@ -37,7 +39,7 @@ public class GrandSpeculum : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        healthText.text = health.ToString("D3") + "/" + maxHealth.ToString("D3");
     }
 
     public bool IsBroken()
