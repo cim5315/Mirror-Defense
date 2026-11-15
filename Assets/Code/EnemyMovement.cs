@@ -25,7 +25,7 @@ public class EnemyMovement : MonoBehaviour
             pathIndex++;
             if(pathIndex == LevelManager.main.path.Length)
             {
-                GrandSpeculum.playerHealth.Health -= 10;
+                GrandSpeculum.playerHealth.Health -= 50;
                 EnemySpawner.onEnemyDestroyed.Invoke();
                 Destroy(gameObject);
                 return;

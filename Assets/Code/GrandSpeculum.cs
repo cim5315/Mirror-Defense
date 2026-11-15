@@ -51,4 +51,9 @@ public class GrandSpeculum : MonoBehaviour
             return false;
         }
     }
+
+    public double HealthPercentage()
+    {
+        return health / (double)maxHealth;
+    }
 }
