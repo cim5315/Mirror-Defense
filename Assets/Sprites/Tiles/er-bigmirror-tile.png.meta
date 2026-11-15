@@ -3,17 +3,17 @@ guid: 3df65e99c0dc6854cb852a1fdc66b16c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2776983276217025644
-    second: er-bigmirror-tile 1_0
+      213: -6208809070225190941
+    second: er-bigmirror-tile_0
   - first:
-      213: -5485786634974437730
-    second: er-bigmirror-tile 1_1
+      213: 2235598786264342939
+    second: er-bigmirror-tile_1
   - first:
-      213: -4367357764182944596
-    second: er-bigmirror-tile 1_2
+      213: 4776910269690204196
+    second: er-bigmirror-tile_2
   - first:
-      213: -2767214732058008154
-    second: er-bigmirror-tile 1_3
+      213: -5888603861783038848
+    second: er-bigmirror-tile_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: er-bigmirror-tile 1_0
+      name: er-bigmirror-tile_0
       rect:
         serializedVersion: 2
         x: 1
         y: 1
         width: 16
-        height: 78
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49b32e16c6c2679d0800000000000000
-      internalID: -2776983276217025644
+      spriteID: 3ef010bdb01e5d9a0800000000000000
+      internalID: -6208809070225190941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: er-bigmirror-tile 1_1
+      name: er-bigmirror-tile_1
       rect:
         serializedVersion: 2
         x: 17
         y: 1
         width: 16
-        height: 78
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9e53c4de129ed3b0800000000000000
-      internalID: -5485786634974437730
+      spriteID: b91a49b5041760f10800000000000000
+      internalID: 2235598786264342939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: er-bigmirror-tile 1_2
+      name: er-bigmirror-tile_2
       rect:
         serializedVersion: 2
         x: 33
         y: 2
         width: 16
-        height: 76
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca4d4d2b0470463c0800000000000000
-      internalID: -4367357764182944596
+      spriteID: 420dcc4c49efa4240800000000000000
+      internalID: 4776910269690204196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: er-bigmirror-tile 1_3
+      name: er-bigmirror-tile_3
       rect:
         serializedVersion: 2
         x: 49
         y: 3
         width: 15
-        height: 73
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a5647eccd0e899d0800000000000000
-      internalID: -2767214732058008154
+      spriteID: 084bd63acf9774ea0800000000000000
+      internalID: -5888603861783038848
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      er-bigmirror-tile 1_0: -2776983276217025644
-      er-bigmirror-tile 1_1: -5485786634974437730
-      er-bigmirror-tile 1_2: -4367357764182944596
-      er-bigmirror-tile 1_3: -2767214732058008154
+      er-bigmirror-tile_0: -6208809070225190941
+      er-bigmirror-tile_1: 2235598786264342939
+      er-bigmirror-tile_2: 4776910269690204196
+      er-bigmirror-tile_3: -5888603861783038848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
