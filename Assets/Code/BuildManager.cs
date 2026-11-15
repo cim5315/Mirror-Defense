@@ -41,6 +41,10 @@ public class BuildManager : MonoBehaviour
     private bool isCurrentlyPlacing = false;
     private float rotationOffset;
     public bool canPlace;
+    public bool CanPlace
+    {
+        set { canPlace = value; }
+    }
 
     private void Awake()
     {

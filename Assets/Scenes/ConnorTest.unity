@@ -487,7 +487,7 @@ MonoBehaviour:
   cursor: {fileID: 1394116860}
   rotationGuideActual: {fileID: 3414295895097082407, guid: d477fa3700dc2ee4dbcc41090505d151, type: 3}
   padding: 0
-  canPlace: 0
+  canPlace: 1
 --- !u!114 &216881227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10484,7 +10484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1408332713
 RectTransform:
   m_ObjectHideFlags: 0
