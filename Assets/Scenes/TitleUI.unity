@@ -453,7 +453,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 533201109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 891249476}
+        m_TargetAssemblyTypeName: MenuButtonManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &533201109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,6 +516,7 @@ GameObject:
   - component: {fileID: 891249474}
   - component: {fileID: 891249473}
   - component: {fileID: 891249472}
+  - component: {fileID: 891249476}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -599,6 +612,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &891249476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891249471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96438436490aacf42a4eb877367f32b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonManager
+  LevelName: temp
+  Settings: temp
 --- !u!1 &926696093
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +638,7 @@ GameObject:
   - component: {fileID: 926696097}
   - component: {fileID: 926696096}
   - component: {fileID: 926696095}
+  - component: {fileID: 926696098}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -680,7 +708,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 926696096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 891249476}
+        m_TargetAssemblyTypeName: MenuButtonManager, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &926696096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,6 +759,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926696093}
   m_CullTransparentMesh: 1
+--- !u!114 &926696098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926696093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96438436490aacf42a4eb877367f32b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  LevelName: 
+  Settings: 
 --- !u!1 &1103392492
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +933,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1383836923}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 891249476}
+        m_TargetAssemblyTypeName: MenuButtonManager, Assembly-CSharp
+        m_MethodName: GoSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1383836923
 MonoBehaviour:
   m_ObjectHideFlags: 0
