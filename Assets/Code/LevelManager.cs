@@ -22,13 +22,23 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isSelectMirrorMode)
+        if (isBuildingPhase == true)
         {
-            UISlideIn.uISlideIn.SlideIn();
+            if (isSelectMirrorMode == true)
+            {
+                UISlideIn.uISlideIn.SlideIn();
+                BuildManager.main.CanPlace = false;
+            }
+            else
+            {
+                UISlideIn.uISlideIn.SlideOut();
+                BuildManager.main.CanPlace = true;
+            }
         }
         else
         {
             UISlideIn.uISlideIn.SlideOut();
+            BuildManager.main.CanPlace = false;
         }
     }
 }

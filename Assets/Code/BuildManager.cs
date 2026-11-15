@@ -40,6 +40,11 @@ public class BuildManager : MonoBehaviour
     private Vector2 mouseScreenPos;
     private bool isCurrentlyPlacing = false;
     private float rotationOffset;
+    public bool canPlace;
+    public bool CanPlace
+    {
+        set { canPlace = value; }
+    }
 
     private void Awake()
     {
@@ -53,48 +58,51 @@ public class BuildManager : MonoBehaviour
 
     void Update()
     {
-        
-        if (targetTilemap == null) return;
-
-        if (isCurrentlyPlacing)
+        if (canPlace)
         {
-            UpdatePlacementPreview();
-            return;
-        }
+            if (targetTilemap == null) return;
 
-        if (virtualMouseInput != null)
-        {
-            mouseScreenPos = virtualMouseInput.virtualMouse.position.ReadValue();
-            mouseScreenPos.x = Mathf.Clamp(mouseScreenPos.x, padding, Screen.width - padding);
-            mouseScreenPos.y = Mathf.Clamp(mouseScreenPos.y, padding + 20, Screen.height - padding);
-            InputState.Change(virtualMouseInput.virtualMouse.position, mouseScreenPos);
-        }
-        else
-        {
-            if (Mouse.current == null) return;
-            mouseScreenPos = Mouse.current.position.ReadValue();
-        }
-
-        Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, -mainCamera.transform.position.z));
-        worldPos.z = targetTilemap.transform.position.z;
-
-        Vector3Int currentCell = targetTilemap.WorldToCell(worldPos);
-
-        if (currentCell != previousCell)
-        {
-            if (tileSelected != null) Destroy(tileSelected);
-            if (rotationGuide != null) Destroy(rotationGuide);
-
-            previousCell = currentCell;
-            Vector3 spawnPosition = targetTilemap.GetCellCenterWorld(currentCell);
-
-            if (!targetTilemap.HasTile(currentCell))
+            if (isCurrentlyPlacing)
             {
-                tileSelected = Instantiate(tileSelector, spawnPosition, Quaternion.identity);
-                rotationGuide = Instantiate(rotationGuideActual, spawnPosition, Quaternion.identity);
-                NotCurrentlyPlacing();
+                UpdatePlacementPreview();
+                return;
+            }
+
+            if (virtualMouseInput != null)
+            {
+                mouseScreenPos = virtualMouseInput.virtualMouse.position.ReadValue();
+                mouseScreenPos.x = Mathf.Clamp(mouseScreenPos.x, padding, Screen.width - padding);
+                mouseScreenPos.y = Mathf.Clamp(mouseScreenPos.y, padding + 20, Screen.height - padding);
+                InputState.Change(virtualMouseInput.virtualMouse.position, mouseScreenPos);
+            }
+            else
+            {
+                if (Mouse.current == null) return;
+                mouseScreenPos = Mouse.current.position.ReadValue();
+            }
+
+            Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, -mainCamera.transform.position.z));
+            worldPos.z = targetTilemap.transform.position.z;
+
+            Vector3Int currentCell = targetTilemap.WorldToCell(worldPos);
+
+            if (currentCell != previousCell)
+            {
+                if (tileSelected != null) Destroy(tileSelected);
+                if (rotationGuide != null) Destroy(rotationGuide);
+
+                previousCell = currentCell;
+                Vector3 spawnPosition = targetTilemap.GetCellCenterWorld(currentCell);
+
+                if (!targetTilemap.HasTile(currentCell))
+                {
+                    tileSelected = Instantiate(tileSelector, spawnPosition, Quaternion.identity);
+                    rotationGuide = Instantiate(rotationGuideActual, spawnPosition, Quaternion.identity);
+                    NotCurrentlyPlacing();
+                }
             }
         }
+        
     }
 
     public void Click(InputAction.CallbackContext context)
@@ -173,7 +181,7 @@ public class BuildManager : MonoBehaviour
 
     public void Spawn(InputAction.CallbackContext context)
     {
-        if (!(context.duration > 1) && isCurrentlyPlacing)
+        if (!(context.duration > 1) && isCurrentlyPlacing && canPlace)
         {
             int finalSlice = currentPreviewSlice != -1 ? currentPreviewSlice : 2;
             GetPrefabAndRotation(finalSlice, out GameObject prefabToSpawn, out Quaternion spawnRotation);

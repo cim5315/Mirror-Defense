@@ -30,7 +30,7 @@
                     "id": "335e8b93-ab37-4b16-9947-755322c9e26f",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Tap(duration=1)",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
