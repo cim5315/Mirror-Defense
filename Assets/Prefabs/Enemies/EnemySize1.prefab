@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 0
-  maxHealth: 4
+  maxHealth: 2
 --- !u!1 &6545470020785719280
 GameObject:
   m_ObjectHideFlags: 0
