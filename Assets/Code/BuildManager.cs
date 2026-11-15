@@ -36,6 +36,7 @@ public class BuildManager : MonoBehaviour
     private Vector3 lockedSpawnPosition;
     private Vector2 mouseScreenPos;
     private bool isCurrentlyPlacing = false;
+    private float rotationOffset;
 
     private void Awake()
     {
@@ -187,11 +188,16 @@ public class BuildManager : MonoBehaviour
         float snappedAngle = slice * 45f;
         bool isDiagonal = (slice % 2 != 0);
 
-        prefab = isDiagonal ? diagonalPrefab : cardinalPrefab;
-
-        // Added + 180f to flip the cardinal prefab to the exact opposite direction
-        float rotationOffset = isDiagonal ? snappedAngle - 135f : snappedAngle + 180f;
-
+        if (isDiagonal)
+        {
+            prefab = diagonalPrefab;
+            rotationOffset = snappedAngle - 135f;
+        }
+        else
+        {
+            prefab = cardinalPrefab;
+            rotationOffset = snappedAngle + 180f;
+        }
         rotation = Quaternion.Euler(0f, 0f, rotationOffset);
     }
 }
