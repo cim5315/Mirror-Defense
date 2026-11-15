@@ -356,7 +356,6 @@ MonoBehaviour:
   targetTilemap: {fileID: 1231790697}
   cardinalPrefab: {fileID: 3679960220201440040, guid: e8b97319d1876b141bb6c312f58969fe, type: 3}
   diagonalPrefab: {fileID: 2424181849050699579, guid: 29870555c450bf44eb2bb573dc12dda8, type: 3}
-  spawnPoint: {fileID: 0}
   deadzone: 0.2
   virtualMouseInput: {fileID: 1394116862}
   cursor: {fileID: 1394116860}
@@ -405,12 +404,12 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 216881226}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: Direction
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -418,6 +417,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 75bdd146-ca68-441d-a7b9-8f4a5038d4af
     m_ActionName: 'Gameplay/Direction[/DualSenseGamepadHID/leftStick]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 216881226}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 335e8b93-ab37-4b16-9947-755322c9e26f
+    m_ActionName: 'Gameplay/Spawn[/DualSenseGamepadHID/buttonSouth]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
