@@ -9,7 +9,9 @@ public class LevelManager : MonoBehaviour
     public bool isSelectMirrorMode = true;
     public bool isPlaceMirrorMode = false;
     public GameObject startRoundButton;
-    
+    private bool prevBuildingPhase;
+    private bool prevSelectMirrorMode;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
@@ -19,13 +21,30 @@ public class LevelManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+        ApplyPhaseState();
+        prevBuildingPhase = isBuildingPhase;
+        prevSelectMirrorMode = isSelectMirrorMode;
     }
     // Update is called once per frame
     void Update()
     {
-        if (isBuildingPhase == true)
+        // Only proceed if at least one boolean changed since the last frame
+        if (isBuildingPhase == prevBuildingPhase && isSelectMirrorMode == prevSelectMirrorMode)
         {
-            if (isSelectMirrorMode == true)
+            return;
+        }
+
+        ApplyPhaseState();
+
+        // Update the tracked states
+        prevBuildingPhase = isBuildingPhase;
+        prevSelectMirrorMode = isSelectMirrorMode;
+    }
+    private void ApplyPhaseState()
+    {
+        if (isBuildingPhase)
+        {
+            if (isSelectMirrorMode)
             {
                 UISlideIn.uISlideIn.SlideIn();
                 BuildManager.main.CanPlace = false;

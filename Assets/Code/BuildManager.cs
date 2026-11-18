@@ -54,6 +54,8 @@ public class BuildManager : MonoBehaviour
     public bool canPlace = true;
     public bool CanPlace { set { canPlace = value; } }
 
+    private Coroutine cursorToggleCoroutine;
+
     private void Awake()
     {
         main = this;
@@ -65,7 +67,9 @@ public class BuildManager : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (virtualMouseInput == null || virtualMouseInput.virtualMouse == null) return;
+        // Added '.added' check to ensure the virtual mouse is currently registered
+        if (virtualMouseInput == null || virtualMouseInput.virtualMouse == null || !virtualMouseInput.virtualMouse.added)
+            return;
 
         // 1. Read and clamp the virtual mouse position in screen pixels
         Vector2 pos = virtualMouseInput.virtualMouse.position.ReadValue();
@@ -182,10 +186,9 @@ public class BuildManager : MonoBehaviour
             NotCurrentlyPlacing();
         }
     }
-
     private void UpdateCursorPosition()
     {
-        if (virtualMouseInput != null && virtualMouseInput.virtualMouse != null)
+        if (virtualMouseInput != null && virtualMouseInput.virtualMouse != null && virtualMouseInput.virtualMouse.added)
         {
             mouseScreenPos = virtualMouseInput.virtualMouse.position.ReadValue();
         }
@@ -237,7 +240,11 @@ public class BuildManager : MonoBehaviour
 
     public void CurrentlyPlacing()
     {
-        if (cursor != null) cursor.SetActive(false);
+        if (cursor != null)
+        {
+            if (cursorToggleCoroutine != null) StopCoroutine(cursorToggleCoroutine);
+            cursorToggleCoroutine = StartCoroutine(SetCursorActiveNextFrame(false));
+        }
         if (tileSelected != null) tileSelected.SetActive(false);
 
         if (rotationGuide == null && rotationGuideActual != null)
@@ -252,13 +259,30 @@ public class BuildManager : MonoBehaviour
 
     public void NotCurrentlyPlacing()
     {
-        if (cursor != null) cursor.SetActive(true);
+        if (cursor != null)
+        {
+            if (cursorToggleCoroutine != null) StopCoroutine(cursorToggleCoroutine);
+            cursor.SetActive(true);
+        }
         if (rotationGuide != null) rotationGuide.SetActive(false);
-        if (tileSelected != null) tileSelected.SetActive(true);
+
+        // Destroy the old selector so it doesn't linger on an occupied tile
+        if (tileSelected != null) Destroy(tileSelected);
+
+        // Reset previousCell so Update() re-checks cell availability on the very next frame
+        previousCell = new Vector3Int(int.MaxValue, int.MaxValue, int.MaxValue);
+
         if (previewObject != null) Destroy(previewObject);
 
         currentPreviewSlice = -1;
         isCurrentlyPlacing = false;
+    }
+
+    private System.Collections.IEnumerator SetCursorActiveNextFrame(bool isActive)
+    {
+        yield return null;
+        if (cursor != null) cursor.SetActive(isActive);
+        cursorToggleCoroutine = null;
     }
 
     public void Direction(InputAction.CallbackContext context)
